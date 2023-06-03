@@ -109,7 +109,7 @@ body {
 
 .slider {
     margin-top: 52px;
-    background: url('/assets/img/chicago.jpg') no-repeat top center / contain;
+    background: url('./assets/img/chicago.jpg') no-repeat top center / contain;
     padding-top: 50%;
     position: relative;
 }
