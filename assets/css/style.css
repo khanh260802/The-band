@@ -17,10 +17,13 @@ body {
     height: 3000px;
 }
 
+.overflow-hidden-mobile {
+    
+}
+
 .header {
     --header-height:52px;
     height: var(--header-height);
-    background-color: #000;
     position: fixed;
     width: 100%;
     top: 0; 
@@ -28,7 +31,7 @@ body {
 }
 
 .nav {
-    display: inline-block;
+    background-color: #000;
 }
 
 .nav > li {
@@ -39,7 +42,7 @@ body {
 .nav li > a{
     text-decoration: none;
     line-height: var(--header-height);
-    display: inline-block;
+    display: block;
     padding: 0 24px; 
     color: #fff; 
     font-size: 1rem; 
@@ -65,6 +68,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background-color: #fff;
 } 
+
 
 .nav>:last-child>ul a {
     color: #000; 
@@ -95,13 +99,21 @@ body {
     background-color: #ccc;
 }
 
-.header .btn-search {
-    float: right; 
+.header .btn-search,
+.header .btn-menu
+{
     color: #fff;
     line-height: var(--header-height);
     padding: 0 28px;
     font-size: 18px;
     cursor: pointer;
+    position: absolute;
+    top: 0; 
+    right: 0;
+}
+
+.header .btn-menu {
+    display: none;
 }
 
 .header .btn-search:hover { 
@@ -175,11 +187,17 @@ body {
     line-height: 1.5;
 }
 
+.content .intro .list-members {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+}
 
 
 .content .intro .item-member {
     text-align: center;
-    display: inline-block;
+    padding-top: 16px;
+    display: block;
 }
 .content .intro .name-member {
     margin: 20px 0; 
@@ -238,16 +256,17 @@ body {
 
 
 .spaces-list {
-    padding:32px 0;
+    padding:32px 0 0;
     overflow: hidden;
-    margin: 0 -8px; 
+    display: flex; 
+    justify-content: space-between;
 }
 
 .space-item {
     background-color: #000;
     float: left; 
-    width: 33.333333%;
-    padding: 0 8px;
+    width: calc(33.333% - 15px);
+    padding-bottom: 16px;
 }
 
 .space-item .space-img {
@@ -293,6 +312,10 @@ body {
     justify-content: space-between;
 }
 
+.contact-label  {
+    padding-bottom: 8px;
+}
+
 .contact-label .label-item {
     margin-bottom: 8px;
 }
@@ -332,7 +355,6 @@ body {
 .footer {
     padding: 64px;
     text-align: center;
-    vertical-align: center;
 }
 
 .footer .socials-list {
@@ -468,6 +490,4 @@ body {
     color: #009688; 
 }
 
-.footer {
-    
-}
+

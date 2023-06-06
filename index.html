@@ -7,11 +7,12 @@
     <title>The Band</title>
     <link rel="stylesheet" href="./assets//icons/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="icon" href="./assets/img/youtube_favicon_144x144.png" type="image/x-icon">
 </head>
 <body>
     <div class="main">
-        <div class="header">
+        <div class="header overflow-hidden-mobile">
             <ul class="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#band">Band</a></li>
@@ -30,6 +31,11 @@
             <div class="btn-search">
                 <i class="ti-search"></i>
             </div>
+
+            <div class="btn-menu btn-grey-hover">
+                <i class="ti-menu"></i>
+            </div>
+
         </div>
 
         <div class="slider">
@@ -213,6 +219,8 @@
         var modalContainer = document.querySelector('.modal-container'); 
         var modal = document.querySelector('.modal'); 
         var btnCloses = document.querySelectorAll('.btn-close'); 
+        var header = document.querySelector('.header'); 
+        var btnMenu = document.querySelector('.btn-menu'); 
         for( let btn of btnBuy ) {
             btn.addEventListener('click', function(event) {
                 event.preventDefault(); 
@@ -233,6 +241,14 @@
 
         modal.addEventListener('click', function(event) {
             event.stopPropagation(); 
+        })
+
+        btnMenu.addEventListener('click', function(event) { 
+            var isHidden = header.classList.contains('overflow-hidden-mobile'); 
+            if(isHidden) 
+                header.classList.remove('overflow-hidden-mobile'); 
+            else 
+                header.classList.add('overflow-hidden-mobile'); 
         })
         
     </script>

@@ -1,0 +1,37 @@
+
+@media (max-width: 740px) {
+    .slider .text-content,
+    .header .btn-search {
+        display: none;
+    } 
+
+    .nav  > li,
+    .header .btn-menu {
+        display: block;
+    }
+
+    .overflow-hidden-mobile {
+        overflow: hidden;
+    }
+
+    .intro .list-members {
+        flex-direction: column;
+    }
+
+    .spaces-list {
+        flex-direction: column;
+    }
+
+    .space-item {
+        width: 100%;
+    }
+
+    .contact-body {
+        flex-direction: column;
+    }
+
+    .contact-body .input-name-email input {
+        display: block;
+        width: 100%;
+    }
+}
