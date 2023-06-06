@@ -297,6 +297,7 @@ body {
 }
 
 .space-item .btn-buy {
+    text-align: center;
     display: inline-block;
     text-decoration: none;
     color: #fff; 

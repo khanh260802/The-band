@@ -22,16 +22,14 @@
         flex-direction: column;
     }
 
-    .space-item {
-        width: 100%;
-    }
-
     .contact-body {
         flex-direction: column;
     }
-
-    .contact-body .input-name-email input {
-        display: block;
+    
+    .space-item,
+    .contact-body .input-name-email input,
+    .space-item .btn-buy,
+    .contact-body .btn-send {
         width: 100%;
     }
 }
