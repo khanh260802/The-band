@@ -10,6 +10,10 @@
         display: block;
     }
 
+    .nav > li:first-child {
+        display: inline-block;
+    }
+
     .overflow-hidden-mobile {
         overflow: hidden;
     }
