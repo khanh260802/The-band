@@ -59,6 +59,7 @@ body {
 
 .nav>:last-child {
     position: relative;
+    cursor: pointer;
 }
 
 .nav>:last-child .menu {

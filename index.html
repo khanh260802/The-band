@@ -19,7 +19,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">More</a>
+                    <a> More </a>
                     <ul class='menu'>
                         <li><a href="#">Merchandise</a></li>
                         <li><a href="#">Extras</a></li>
@@ -221,6 +221,8 @@
         var btnCloses = document.querySelectorAll('.btn-close'); 
         var header = document.querySelector('.header'); 
         var btnMenu = document.querySelector('.btn-menu'); 
+        var menuItems = document.querySelectorAll('.nav li > a[href*="#"]')
+
         for( let btn of btnBuy ) {
             btn.addEventListener('click', function(event) {
                 event.preventDefault(); 
@@ -251,6 +253,12 @@
                 header.classList.add('overflow-hidden-mobile'); 
         })
         
+        for( let item of menuItems ) {
+            item.onclick = function(event) {
+                header.classList.add('overflow-hidden-mobile');
+            }
+            
+        }
     </script>
 </body>
 </html>
